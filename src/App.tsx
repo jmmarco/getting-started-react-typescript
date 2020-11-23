@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+interface TodoProps {
+  id: number;
+  text: string;
+  completed: boolean;
+  handleToggle: (id: number) => void;
+}
+
 function App() {
+
+  const [todos, setTodos] = React.useState([{
+    id: 1,
+    text: 'Wash Death Star',
+    completed: false
+  }, {
+    id: 2,
+    text: 'Kill Obi Wan',
+    completed: false
+  }])
+
+  const handleToggle = (id: number) => {
+    setTodos(todos.map(t => 
+        t.id === id
+        ? {
+          ...t,
+          completed: !t.completed
+        }
+        :
+        t
+      ))
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {todos.map(t => <Todo key={t.text} {...t} handleToggle={handleToggle} />)}
+      </ul>
     </div>
   );
+}
+
+
+function Todo({ id, text, completed, handleToggle} : TodoProps) {
+  return (
+    <li onClick={() => handleToggle(id) } className={completed ? 'strike' : '' }>{id} | {text}</li>
+  )
 }
 
 export default App;

@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Getting started React + Typescript
+This is a basic TODO type designed to get your feet wet with React and Typescript
+There are multiple branches that you can clone so you can practice the concepts covered. See details below
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Available branches
+There are three branches available for you to explore. The branch `basic-solution` has the basic implementation of the Todo app.
+Clone this, take a look around and review the Typescript specific stuff.
 
-## Available Scripts
+If you're done reviewing, you'll notice that the basic solution doesn't have the ability to add a todo. 
+It would be nice to have this ability. You can clone the `add-todo` branch listed below or just implement the functionality using the `basic-solution` you already have, your call.
 
-In the project directory, you can run:
+If you get stuck, or would like to see how I implemented the add todo functionality, then clone the `complete-solution`. 
 
-### `yarn start`
+### `basic-solution`
+This branch contains the basic implementation of the Todo app. You can only toggle todos.
+```
+git clone --single-branch --branch basic-solution https://github.com/jmmarco/getting-started-react-typescript.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `add-todo`
+Clone the `add-todo` branch. It contains the boilerplate code so you can finish implementing the ability to add a single todo:
+```
+git clone --single-branch --branch add-todo https://github.com/jmmarco/getting-started-react-typescript.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `complete-solution`
+This branch contais the complete implementation of the Todo app. You can toggle and add todos. 
+```
+git clone --single-branch --branch complete-solution https://github.com/jmmarco/getting-started-react-typescript.git
+```
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

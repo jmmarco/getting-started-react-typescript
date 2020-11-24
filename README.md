@@ -23,11 +23,9 @@ git clone --single-branch --branch NAME-OF-THE-BRANCH https://github.com/jmmarco
 ```
 
 ## Where do I begin?
+
 You should start with the `basic-solution` branch. Clone it and review. You'll realize that this branch doesn't have the ability to add a todo. It would be nice to have this functionality. 
 
 You can clone the `add-todo` branch listed below or just implement the functionality using the `basic-solution` you already have, your call.
 
 If you get stuck, or would like to see how I implemented the add todo functionality, clone the `complete-solution`.
- 
-
-

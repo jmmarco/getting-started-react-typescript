@@ -67,7 +67,7 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>Vader's Todos</h1>
+        <h1>Vader's Todo App</h1>
       </header>
       <AddTodo handleAdd={handleAdd} />
       {/* {JSON.stringify(todos)} */}

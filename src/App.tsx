@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+// TodoProps (Typescript)
 interface TodoProps {
   id: number;
   text: string;
@@ -8,6 +9,7 @@ interface TodoProps {
   handleToggle: (id: number) => void;
 }
 
+// Main App Component
 function App() {
   const [todos, setTodos] = React.useState([
     {
@@ -17,7 +19,12 @@ function App() {
     },
     {
       id: 2,
-      text: "Kill Obi Wan",
+      text: "Destroy Alderaan",
+      completed: true,
+    },
+    {
+      id: 3,
+      text: "Tell Luke I'm his father",
       completed: false,
     },
   ]);
@@ -35,8 +42,16 @@ function App() {
     );
   };
 
+  const handleAdd = () => {
+    // Write code so a new TODO can be added to the main todos array...
+  }
+
   return (
-    <div className="App">
+    <div className="app">
+      <header>
+        <h1>Vader's Todo App</h1>
+      </header>
+      <AddTodo />
       <ul>
         {todos.map((t) => (
           <Todo key={t.text} {...t} handleToggle={handleToggle} />
@@ -51,6 +66,20 @@ function Todo({ id, text, completed, handleToggle }: TodoProps) {
     <li onClick={() => handleToggle(id)} className={completed ? "strike" : ""}>
       {id} | {text}
     </li>
+  );
+}
+
+// Add Todo 
+function AddTodo() {
+
+  // You need to add the necessary logic (state or refs) to handle the input
+  // You also need to add an event listener to the button so the Todo can be added in the main component
+
+  return (
+    <div>
+      <input type="text" />
+      <button>Add</button>
+    </div>
   );
 }
 

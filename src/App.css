@@ -8,6 +8,10 @@ ul {
   padding-left: 0;
 }
 
+ul > li {
+  cursor: pointer;
+}
+
 .strike {
   text-decoration: line-through;
 }
